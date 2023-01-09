@@ -8,7 +8,8 @@ import os
 import matplotlib.pyplot as plt
 
 
-path = 'C:/Users/Sven/Google Drive/Teaching/Machine_Learning_2023/practice_01/data_01/'
+#path = 'C:/Users/Sven/Google Drive/Teaching/Machine_Learning_2023/practice_01/data_01/'
+path = '/Users/svennomm/Library/CloudStorage/GoogleDrive-sven.nomm@gmail.com/My Drive/Teaching/Machine_Learning_2023/practice_01/data_01/'
 
 n_1 = 200  # number of the elements
 mu_1 = np.array([0, 1])  # center (centroid)
