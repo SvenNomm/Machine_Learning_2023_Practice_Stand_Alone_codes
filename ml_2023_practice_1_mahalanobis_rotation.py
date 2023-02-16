@@ -10,8 +10,8 @@ import ml_2023_practice_support as mlps
 import ml_2023_my_distance_functions as my_dist
 
 
-path = 'C:/Users/Sven/Google Drive/Teaching/Machine_Learning_2023/practice_01/data_01/'
-#path = '/Users/svennomm/Library/CloudStorage/GoogleDrive-sven.nomm@gmail.com/My Drive/Teaching/Machine_Learning_2023/practice_01/data_01/'
+#path = 'C:/Users/Sven/Google Drive/Teaching/Machine_Learning_2023/practice_01/data_01/'
+path = '/Users/svennomm/Library/CloudStorage/GoogleDrive-sven.nomm@gmail.com/My Drive/Teaching/Machine_Learning_2023/practice_01/data_01/'
 fname = path + 'one_gaussian_2.pkl'
 file_handle = open(fname, 'rb')
 set_1 = pkl.load(file_handle)
@@ -36,6 +36,7 @@ fig, axs = plt.subplots()
 set = axs.scatter(set_1[:, 0], set_1[:, 1], c='tab:pink')
 mc, = axs.plot(mahalanobis_circle[:, 0], mahalanobis_circle[:, 1], c='darkviolet')
 axs.plot(circle[:, 0], circle[:, 1], c='blue', linewidth=5)
+axs.scatter(circle[1, 0], circle[1, 1], c='black', s=100)
 
 
 def animate(i):
@@ -49,6 +50,6 @@ def animate(i):
 
 animation = FuncAnimation(fig, animate, interval=10, repeat=False)
 axs.axis('equal')
-#animation.save('A.gif',fps=10)
+animation.save('A.gif',fps=10)
 plt.show()
 
